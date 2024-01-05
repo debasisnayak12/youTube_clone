@@ -1,5 +1,246 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+*:focus {
+  outline: none;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #212121;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #303030;
+  }
+body {
+  position: relative;
+  background-color: #212121;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #212121;
+  border-bottom: 1px solid #303030;
+  padding: 0 24px;
+}
+#icons {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+#icons span {
+  cursor: pointer;
+}
+.logo {
+  height: 20px;
+  margin: 28px 18px;
+}
+#search-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  max-width: 500px;
+  height: 40px;
+  gap: 4px;
+}
+.search-bar {
+  background-color: #121212;
+  color: #aaa;
+  font-size: 16px;
+  font-weight: 400;
+  width: 400px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  padding: 5px 10px;
+}
+.search-btn {
+  display: flex;
+  width: 50px;
+  height: 40px;
+  padding: 6px 18px;
+  justify-content: center;
+  align-items: center;
+  background: #303030;
+  color: #ffffff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+.search-mic {
+  display: flex;
+  padding: 8px;
+  gap: 10px;
+  border-radius: 40px;
+  background: #000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+#navigation-app {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  width: 204px;
+  height: 40px;
+  justify-content: center;
+  gap: 12px;
+}
+#navigation-app span,
+#navigation-app img {
+  cursor: pointer;
+}
+
+/* sidebar  */
+.sidebar {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  min-width: 240px;
+  width: 240px;
+  height: calc(100vh - 56px);
+  padding-right: 16px;
+  background: #212121;
+  overflow-y: auto;
+}
+/* .sidebar::-webkit-scrollbar{
+    display: none;
+} */
+
+.links {
+  display: block;
+  width: 100%;
+  padding: 6px 6px 6px 24px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.links:hover,
+.links.active {
+  background-color: #303030;
+  border-radius: 5px;
+}
+.seperator {
+  border: none;
+  border-bottom: 1px solid #303030;
+  margin: 8px 0;
+}
+.sidebar h5 {
+  display: flex;
+  padding: 10px 5px 5px 24px;
+  align-items: center;
+  color: #aaaaaa;
+}
+.copyright{
+  color: #aaaaaa;
+  margin: 10px 0 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.copy{
+  color: #aaaaaa;
+  margin: 10px 0 10px 24px;
+  font-size: 12px;
+}
+/* filter  */
+.filters {
+  position: fixed;
+  top: 56px;
+  left: 240px;
+  height: 50px;
+  width: calc(100% - 240px);
+  background-color: #212121;
+  border-bottom: 1px solid #303030;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.filters::-webkit-scrollbar{
+    display: none;
+}
+.filter-options {
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  border-radius: 32px;
+  border: 0.3px solid #aaa;
+  background: #303030;
+  color: #ffffff;
+  font-size: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.filter-options.active{
+    background-color: #ffffff;
+    color: #121212;
+}
+/* video container  */
+.video-container{
+    width: calc(100% - 240px);
+    margin-top: 106px;
+    margin-left: 240px;
+    /* background-color: #121212; */
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    gap: 16px;
+    overflow-x: hidden;
+}
+.video{
+  min-height: 250px;
+  height: auto;
+  cursor: pointer;
+}
+.thumbnail{
+  width: 100%;
+  height: 155px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.content{
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.channel-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.title{
+  width: 100%;
+  height: 40px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  overflow: hidden;
+}
+.channel-name,.channel-views{
+  font-size: 12px;
+  font-weight: 400;
+  margin: 2px 0;
+  color: #AAA;
 }
