@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Details</title>
+    <link rel="stylesheet" href="videoDetails.css">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/bcd251ee/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+      <nav class="navbar">
+      <div id="icons">
+        <span class="material-icons">menu</span>
+        <img class="logo" src="/navbar-assets/Youtube-Logo.png" alt="logo" />
+      </div>
+      <div id="search-box">
+        <input type="text" class="search-bar" placeholder="Search" />
+        <button class="search-btn">
+          <span class="material-icons">search</span>
+        </button>
+        <button class="search-mic">
+          <span class="material-icons">mic</span>
+        </button>
+      </div>
+      <div id="navigation-app">
+        <span class="material-icons">video_camera_front</span>
+        <span class="material-icons">apps</span>
+        <span class="material-icons">notifications</span>
+        <img src="/navbar-assets/Profile.png" alt="Profile" />
+      </div>
+    </nav>
+
+    <main>
+        <section id="video-info">
+            <div id="video-container"></div>
+            <div id="channel-info"></div>
+            <div id="comment-section">
+                <h2>Comments</h2>
+                <!-- Comments will be loaded here -->
+            </div>
+        </section>
+        <section>
+            <div id="recommended-videos">
+                <h2>Recommended Videos</h2>
+                <!-- Recommended videos will be loaded here  -->
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="./videoDetails.js"></script>
+
+</body>
+</html>
