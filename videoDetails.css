@@ -173,3 +173,15 @@ main{
 #recommended-videos a{
     text-decoration: none;
 }
+
+/* Responsive for all device */
+
+/* for mobile devive  */
+@media only screen and (max-width: 480px) {
+  #recommended-videos{
+    display: none;
+  }
+  #video-container{
+    width: 100%;
+  }
+}

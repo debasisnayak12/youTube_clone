@@ -10,15 +10,15 @@
   outline: none;
 }
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    background-color: #212121;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: #303030;
-  }
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #212121;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #303030;
+}
 body {
   position: relative;
   background-color: #212121;
@@ -148,13 +148,13 @@ body {
   align-items: center;
   color: #aaaaaa;
 }
-.copyright{
+.copyright {
   color: #aaaaaa;
   margin: 10px 0 10px 24px;
   font-size: 14px;
   font-weight: 600;
 }
-.copy{
+.copy {
   color: #aaaaaa;
   margin: 10px 0 10px 24px;
   font-size: 12px;
@@ -175,8 +175,8 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
 }
-.filters::-webkit-scrollbar{
-    display: none;
+.filters::-webkit-scrollbar {
+  display: none;
 }
 .filter-options {
   flex: 0 0 auto;
@@ -189,51 +189,51 @@ body {
   margin-right: 10px;
   cursor: pointer;
 }
-.filter-options.active{
-    background-color: #ffffff;
-    color: #121212;
+.filter-options.active {
+  background-color: #ffffff;
+  color: #121212;
 }
 /* video container  */
-.video-container{
-    width: calc(100% - 240px);
-    margin-top: 106px;
-    margin-left: 240px;
-    /* background-color: #121212; */
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 24%);
-    gap: 16px;
-    overflow-x: hidden;
+.video-container {
+  width: calc(100% - 240px);
+  margin-top: 106px;
+  margin-left: 240px;
+  /* background-color: #121212; */
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  gap: 16px;
+  overflow-x: hidden;
 }
-.video{
+.video {
   min-height: 250px;
   height: auto;
   cursor: pointer;
 }
-.video a{
+.video a {
   text-decoration: none;
 }
-.thumbnail{
+.thumbnail {
   width: 100%;
   height: 155px;
   border-radius: 5px;
   object-fit: cover;
 }
-.content{
+.content {
   width: 100%;
   height: 100px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
 }
-.channel-icon{
+.channel-icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 10px;
 }
-.title{
+.title {
   width: 100%;
   height: 40px;
   color: #ffffff;
@@ -241,9 +241,42 @@ body {
   font-weight: 700;
   overflow: hidden;
 }
-.channel-name,.channel-views{
+.channel-name,
+.channel-views {
   font-size: 12px;
   font-weight: 400;
   margin: 2px 0;
-  color: #AAA;
+  color: #aaa;
+}
+
+/* Responsive for All Device  */
+
+/* For Mobile device  */
+@media only screen and (max-width: 600px) {
+  .filters {
+    position: sticky;
+    left: 0;
+    top: 52px;
+    width: 100%;
+  }
+  #navigation-app {
+    display: none;
+  }
+  .sidebar {
+    display: none;
+  }
+  .video-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: static;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+/* for desktop only */
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  
 }
